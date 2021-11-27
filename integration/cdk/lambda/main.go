@@ -2,17 +2,35 @@ package main
 
 import (
 	"context"
+	_ "embed"
 	"fmt"
 
 	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/open-policy-agent/opa/rego"
 )
 
-type MyEvent struct {
-	Name string `json:"name"`
-}
+//go:embed policy/example.rego
+var module string
 
-func HandleRequest(ctx context.Context, name MyEvent) (string, error) {
-	return fmt.Sprintf("Hello %s!", name.Name), nil
+func HandleRequest(ctx context.Context, input interface{}) (interface{}, error) {
+	fmt.Println("input =>", input)
+
+	q := rego.New(
+		rego.Query(`x := data`),
+		rego.Module("policy/example.rego", module),
+		rego.Input(input),
+	)
+
+	rs, err := q.Eval(ctx)
+	if err != nil {
+		panic(err)
+	}
+
+	if len(rs) == 0 {
+		return nil, nil
+	}
+
+	return rs[0].Bindings["x"], nil
 }
 
 func main() {
