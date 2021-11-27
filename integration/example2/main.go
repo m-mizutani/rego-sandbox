@@ -15,8 +15,7 @@ func main() {
 	module := `package blue
 	allow {
 		input.user == "mizutani"
-	}
-	`
+	}`
 
 	q := rego.New(
 		rego.Query(`x := data.blue.allow`),
