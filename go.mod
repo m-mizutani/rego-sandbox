@@ -9,6 +9,7 @@ require (
 
 require (
 	github.com/OneOfOne/xxhash v1.2.8 // indirect
+	github.com/aws/aws-lambda-go v1.27.0 // indirect
 	github.com/ghodss/yaml v1.0.0 // indirect
 	github.com/gobwas/glob v0.2.3 // indirect
 	github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 // indirect
