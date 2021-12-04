@@ -1,9 +1,9 @@
 package example
 
-# bad[y] {
+# result[y] {
 #     12 = y + 7
 # }
 
-good[y] {
+result[y] {
     5 = y
 }

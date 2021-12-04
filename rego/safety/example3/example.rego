@@ -6,10 +6,14 @@ p := {
     "yellow": 2,
 }
 
-# bad {
-#     not p[x] == 3
-# }
+result {
+    not has3
+}
 
-good {
+has3 {
+    p[x] == 3
+}
+
+result {
     count({x | p[x] == 3}) == 0
 }

@@ -6,10 +6,11 @@ p := {
     "yellow": 2,
 }
 
-# bad[x] {
+# BAD
+# result[x] {
 #     not p[x] == 0
 # }
 
-good[y] {
+resutl = y {
     y := {x | p[x]} - {x | p[x] == 0}
 }
