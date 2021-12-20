@@ -1,0 +1,27 @@
+{
+  "notificationConfigName": "organizations/111111111111/notificationConfigs/pubsub_notification",
+  "finding": {
+    "name": "organizations/111111111111/sources/9845029847529038475/findings/f7aa5dd6c3017aeb05779cda6b4e25b0",
+    "parent": "organizations/111111111111/sources/9845029847529038475",
+    "resourceName": "//cloudresourcemanager.googleapis.com/organizations/111111111111",
+    "state": "ACTIVE",
+    "category": "MFA_NOT_ENFORCED",
+    "externalUri": "https://admin.google.com/ac/security/2sv",
+    "sourceProperties": {
+      "Recommendation": "Go to https://admin.google.com/ac/security/2sv and enforce 2-Step Verification for all organizational units.",
+      "ReactivationCount": 0.0,
+      "ExceptionInstructions": "Add the security mark \"allow_mfa_not_enforced\" to the asset with a value of \"true\" to prevent this finding from being activated again. Or, to prevent findings for a particular organizational unit from being activated again, add the org unit path to a comma-separated list on the \"excluded_orgunits\" security mark. Example: /people/vendors/vendorA,/people/contractors/contractorA",
+      "Explanation": "2-Step Verification (2SV) is disabled for some users in your organization. 2SV can be used to protect accounts from unauthorized access and is the most important tool for protecting your organization against compromised login credentials. Learn more at: https://support.google.com/a/answer/175197",
+      "ScannerName": "MFA_SCANNER",
+      "ResourcePath": ["organizations/111111111111/"]
+    },
+    "securityMarks": {
+      "name": "organizations/111111111111/sources/9845029847529038475/findings/f7aa5dd6c3017aeb05779cda6b4e25b0/securityMarks"
+    },
+    "eventTime": "2021-12-13T09:27:20.734175Z",
+    "createTime": "2021-06-16T08:20:36.405Z",
+    "severity": "HIGH",
+    "mute": "MUTED",
+    "findingClass": "MISCONFIGURATION"
+  }
+}

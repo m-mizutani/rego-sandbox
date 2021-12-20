@@ -1,0 +1,7 @@
+[
+  { "node": 1, "status": "running" },
+  { "node": 2, "status": "running" },
+  { "node": 3, "status": "running" },
+  { "node": 4, "status": "stopped" },
+  { "node": 5, "status": "running" }
+]
